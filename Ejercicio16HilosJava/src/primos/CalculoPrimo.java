@@ -6,6 +6,11 @@ public class CalculoPrimo {
 		
 	}
 	
+	/**
+	 * Comprueba si el número indicado es primo o compuesto.
+	 * @param p número del que se comprueba su primalidad.
+	 * @return true si el p es un número primo, y false si es compuesto.
+	 */
 	public synchronized boolean comprobacionPrimo(int p) {
 		
 		
@@ -15,13 +20,13 @@ public class CalculoPrimo {
 			
 		} else {
 			
-			for(int i = 2; i <= p; i++) {
+			for(int i = 2; i < p; i++) {
 				
 				if(p%i == 0 ) {
-					continue;
-				} else {
 					primo = false;
 					break;
+				} else {
+					continue;
 				}
 				
 				
